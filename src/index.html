@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./assets/CSS/styles.css">
+    <title>BuenaPizza</title>
+</head>
+<body>
+    <div class="centrar">
+        <header>
+            <div class="image">
+                <p>Buena Pizza</p>
+                <img src="./assets/Img/HeadPizza.jpg" alt="Banner-Pizza">
+            </div>
+            <!-- Bootstrap -->
+            
+            <!-- Desktop -->
+            <nav>
+                <ul>
+                    <li><a href="#precios">Precios</a></li>
+                    <li><a href="#pedidos">Pedidos</a></li>
+                    <li><a href="#carrito">Carrito</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>    
+        </header>
+        <h1>Menu</h1>
+       <section id="precios">
+            <div class="cont-precios">
+                <h2>Pizzas:</h2>
+                <div class="image">
+                    <p>Muzza: $300</p>
+                    <img src="./assets/Img/PizzaMuzza.jpg" alt="muzza">
+                </div>
+                <div class="image">
+                    <p>Napolitana: $400</p>
+                    <img src="./assets/Img/PizzaNapolitana.jpg" alt="napo">
+                </div>
+                <div class="image">
+                    <p>Calabreza: $380</p>
+                    <img src="./assets/Img/PizzaCalabresa.jpg" alt="muzza">
+                </div>
+            </div>
+            <div class="cont-precios">
+                <h2>Empanadas c/u:</h2>
+                <div class="image">
+                    <p>J&Q: $30</p>
+                    <img src="./assets/Img/EmpJ&Q.jpg" alt="j&q">
+                </div>
+                <div class="image">
+                    <p>Carne: $35</p>
+                    <img src="./assets/Img/EmpCarne.png" alt="carne">
+                </div>
+                <div class="image">
+                    <p>Pollo: $35</p>
+                    <img src="./assets/Img/EmpPollo.jpg" alt="pollo">
+                </div>
+            </div>
+        </section>
+        <h1>Pedidos</h1>
+        <section id="pedidos">
+            <form action="">
+                
+                <div id="tipo">
+                    <label for="orden">Desea Ordenar:</label>
+                    <div>
+                        <input type="button" id="pizza" value="Pizza">
+                        <input type="button" id="empan" value="Empanadas">
+                    </div>
+                </div>
+                <div>
+                    <label for="cantidad">Cantidad</label>
+                    <input type="number" min="1" id="cant">
+                </div>
+                <div id="op1">
+                    <input type="button" id="muzza" value="Muzza" onclick="variedad(this)">
+                    <input type="button" id="napo" value="Napo" onclick="variedad(this)">
+                    <input type="button" id="calab" value="Calab" onclick="variedad(this)">
+                </div>
+                <div id="op2">
+                    <input type="button" id="jyq" value="J&Q" onclick="variedad(this)">
+                    <input type="button" id="carne" value="Carne" onclick="variedad(this)">
+                    <input type="button" id="pollo" value="Pollo" onclick="variedad(this)">
+                </div>
+
+                <input type="button" id="subt" value="Pedir">
+            </form>
+        </section>
+        <h1>Carrito</h1>
+        <section id="carrito">
+            <form action="">
+                <ul id="check">
+                    
+                </ul>
+                <div id="tot">
+                    <h2>Total:</h2>
+                    <p id="total"></p>
+                </div>
+                <div id="botonera">
+                    <input type="button" id="clean" value="Borrar">
+                    <input type="submit" id="confirmar" value="Confirmar">
+                </div>
+
+            </form>
+            
+        </section>
+        <h1>Contacto</h1>
+        <section id="contacto">
+            <ul class="soc-media">
+                <a href="htpps://instagram.com"><img src="./assets/Img/rs/IG.png" alt="Instagram"></a>
+                <a href="https://github.com/agusder95"><img src="./assets/Img/rs/GH.png" alt="Git"></a>
+                <a href="www.linkedin.com/in/agustin-de-robles-62a965214"><img src="./assets/Img/rs/LI.png" alt="linkedin"></a>
+            
+            </ul>
+        </section>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>

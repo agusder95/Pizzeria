@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* img {
+  width: 100%;
+  height: 100%;
+  filter: opacity(75%);
+}
+
+* html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #d5d5d5;
+}
+
+h1 {
+  text-align: center;
+  padding: 1rem;
+  background-color: antiquewhite;
+}
+
+/* Mobile */
+@media screen and (min-width: 320px) {
+  .centrar {
+    margin: auto;
+    max-width: 80rem;
+    background-color: #be4454;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .image {
+    background-color: black;
+    width: 100%;
+    height: 15rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  header .image p {
+    position: absolute;
+    background-color: #be4454f5;
+    font-family: "Dancing Script", cursive;
+    font-size: 3rem;
+    z-index: 1;
+    padding: 1rem 3rem;
+    border-radius: 100%;
+  }
+  header nav {
+    display: none;
+  }
+
+  #precios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #precios .cont-precios {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 24rem;
+  }
+  #precios .cont-precios h2 {
+    padding: 1rem;
+  }
+  #precios .cont-precios .image {
+    padding: 1rem;
+    width: 90%;
+    height: 15rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #precios .cont-precios .image p {
+    position: absolute;
+    background-color: #f1f1f1c2;
+    z-index: 1;
+    font-size: 30px;
+  }
+
+  input[type=button] {
+    margin: 1rem;
+    width: 6rem;
+    height: 3rem;
+    border-radius: 10%;
+    border: 1px solid black;
+    background-color: #f3b056;
+    font-size: 1rem;
+  }
+
+  #pedidos {
+    border-top: 2px dashed black;
+    border-bottom: 2px dashed black;
+    display: flex;
+    justify-content: center;
+    background-color: #48a587;
+  }
+  #pedidos form {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  #pedidos form label {
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+  #pedidos form input[type=number] {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 10%;
+    font-size: 2rem;
+  }
+  #pedidos form #op1 {
+    display: none;
+  }
+  #pedidos form #op2 {
+    display: none;
+  }
+  #pedidos form div {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #carrito {
+    border-top: 2px dashed black;
+    border-bottom: 2px dashed black;
+    background-color: #48a587;
+  }
+  #carrito ul {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  #carrito ul li {
+    font-size: 1rem;
+  }
+  #carrito #tot {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+  }
+  #carrito #tot p {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+  #carrito #botonera {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  #carrito #botonera input[type=submit] {
+    margin: 1rem;
+    width: 6rem;
+    height: 3rem;
+    border-radius: 10%;
+    border: 1px solid black;
+    background-color: #f3b056;
+    font-size: 1rem;
+  }
+
+  #contacto {
+    padding: 1rem;
+  }
+  #contacto ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  #contacto ul a {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  header .image p {
+    position: absolute;
+    font-size: 5rem;
+    padding: 2rem 4rem;
+    z-index: 1;
+  }
+  header nav {
+    display: block;
+    width: 100%;
+    background-color: #e3a34d;
+    border-bottom: 2px dashed black;
+  }
+  header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  header nav ul li {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 2rem;
+  }
+  header nav ul li a {
+    text-decoration: none;
+    background-color: #48a587;
+    color: aliceblue;
+    border-radius: 10%;
+    font-size: 2rem;
+    padding: 1.5rem 2.5rem;
+  }
+  header nav ul li a:active {
+    background-color: #357561;
+  }
+
+  input[type=button] {
+    margin: 1rem;
+    width: 8.5rem;
+    height: 4rem;
+    border-radius: 10%;
+    border: 1px solid black;
+    background-color: #f3b056;
+    font-size: 1.5rem;
+  }
+
+  #carrito ul li {
+    font-size: 1.8rem;
+  }
+  #carrito #tot {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
+  #carrito #tot p {
+    font-size: 2rem;
+    margin-left: 1rem;
+  }
+  #carrito #botonera input[type=submit] {
+    margin: 2rem;
+    width: 8.5rem;
+    height: 4rem;
+    border-radius: 10%;
+    border: 1px solid black;
+    background-color: #f3b056;
+    font-size: 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,312 @@
+$main-red: #be4454;
+$main-gray:#d5d5d5;
+$main-button: #f3b056;
+$main-lblue: #b9b9f7e7;
+$main-bk-font: #f1f1f1c2;
+$ped-bk:#48a587;
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+*img{
+    width: 100%;
+    height: 100%;
+    filter: opacity(75%);
+}
+*html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: $main-gray;
+}
+
+h1{
+    text-align: center;
+    padding: 1rem;
+    background-color: antiquewhite;
+}
+
+/* Mobile */
+@media screen and (min-width: 320px){
+    .centrar{
+        margin: auto;
+        max-width: 80rem;
+        background-color:$main-red;
+    }    
+    
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        
+        .image{
+            background-color: black;
+            width: 100%;
+            height: 15rem;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            p{  
+                position: absolute;
+                background-color: #be4454f5;
+                font-family: 'Dancing Script', cursive;
+                font-size: 3rem;
+                z-index: 1;
+                padding: 1rem 3rem;
+                border-radius: 100%;
+            }
+        }
+        
+        nav{
+            display: none;
+        }
+
+    }
+    
+    #precios{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .cont-precios{
+            h2{
+                padding: 1rem;
+            }
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 24rem;
+            .image{
+                padding: 1rem;
+                width: 90%;
+                height: 15rem;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+               
+                p{
+                    position: absolute;
+                    background-color: $main-bk-font;
+                    z-index: 1;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+
+    input[type=button]{
+        margin: 1rem;
+        width: 6rem;
+        height: 3rem;
+        border-radius: 10%;
+        border: 1px solid black;
+        background-color:  $main-button;
+        font-size: 1rem;
+    }
+
+    #pedidos{
+        border-top: 2px dashed black;
+        border-bottom: 2px dashed black;
+        display: flex;
+        justify-content: center;
+        background-color: $ped-bk;
+
+        form{
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            label{
+                font-size: 1.5rem;
+                margin: 1rem;
+            }
+
+            
+            input[type=number]{
+                width: 3rem;
+                height: 3rem;
+                border-radius: 10%;
+                font-size: 2rem;
+            }
+
+            #op1{
+                display: none;
+            }
+
+            #op2{
+                display: none;
+            }
+
+            div{
+                padding: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+        }
+    }
+
+    #carrito{
+        
+        border-top: 2px dashed black;
+        border-bottom: 2px dashed black;
+        background-color: $ped-bk;
+        
+        ul{
+            padding: 1rem;
+            margin: 1rem;
+            li{
+                font-size: 1rem;
+            }
+        }
+
+        #tot{
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            p{
+                font-size: 1.5rem;
+                margin-left: 1rem;
+            }
+        }
+
+        #botonera{
+
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+
+            input[type=submit]{
+                margin: 1rem;
+                width: 6rem;
+                height: 3rem;
+                border-radius: 10%;
+                border: 1px solid black;
+                background-color:  $main-button;
+                font-size: 1rem;
+            }
+        }
+
+
+    }
+
+
+
+    #contacto{
+        padding: 1rem;
+        ul{
+            display: flex;
+            justify-content: space-around;
+            a{
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+    }
+}
+
+
+
+
+/* Desktop */
+@media screen and (min-width: 1024px){
+    header{
+        .image{
+            
+            p{  
+                position: absolute;
+                font-size: 5rem;
+                padding: 2rem 4rem;
+                z-index: 1;
+            }
+        }
+
+        nav{
+            display: block;
+            width: 100%;
+            background-color: #e3a34d;
+            border-bottom: 2px dashed black;
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                li{
+                    list-style: none;
+                    margin: 1rem 0;
+                    padding: 2rem;
+
+                    a{
+                        text-decoration: none;
+                        background-color: #48a587;
+                        color: aliceblue;
+                        border-radius: 10%;
+                        font-size: 2rem;
+                        padding: 1.5rem 2.5rem;
+                    }
+                    a:active{
+                        background-color: #357561;
+                    }
+                }
+            }
+        }
+
+    }
+    input[type=button]{
+        margin: 1rem;
+        width: 8.5rem;
+        height: 4rem;
+        border-radius: 10%;
+        border: 1px solid black;
+        background-color:  $main-button;
+        font-size: 1.5rem;
+    }
+
+    #carrito{
+        
+        ul{
+            li{
+                font-size: 1.8rem;
+            }
+        }
+
+        #tot{
+            display: flex;
+            align-items: center;
+            padding: 1.5rem;
+            font-size: 1.5rem;
+            p{
+                font-size: 2rem;
+                margin-left: 1rem;
+            }
+        }
+        #botonera{
+
+            input[type=submit]{
+                margin: 2rem;
+                width: 8.5rem;
+                height: 4rem;
+                border-radius: 10%;
+                border: 1px solid black;
+                background-color:  $main-button;
+                font-size: 1.5rem;
+            }
+        }
+        
+        
+    }
+}
