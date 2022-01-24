@@ -16,7 +16,8 @@ const menu = {
     }
 }  
 
-
+let cantpedido = []
+let pedido = []
 let subtotal = 0
 let precio = 0
 
@@ -116,10 +117,11 @@ const subt = document.getElementById('subt').addEventListener('click',event=>{
         
         createlist(ped, cantidad, precio)
         clean()
+        cantpedido.push (cantidad)
+        pedido.push(ped)
     }else{
         window.alert('Completar Datos')
     }
-    
 })
 
 
@@ -143,4 +145,20 @@ const borrar = document.getElementById('clean').addEventListener('click',event=>
     precio = 0
     document.getElementById('total').innerHTML = ''
 
+    for(let i = 0; i <= cantpedido.length; i++){
+        cantpedido.pop(i)
+        pedido.pop(i)
+    }
+})
+
+
+let submit = document.getElementById('confirmar')
+
+submit.addEventListener('click',event =>{
+
+    for (let i = 0; i < cantpedido.length; i++){
+        localStorage.setItem(pedido[i], cantpedido[i])
+    }
+
+    localStorage.setItem('Total',subtotal)
 })
